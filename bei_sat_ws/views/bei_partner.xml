@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="view_bei_partner_gastos_form" model="ir.ui.view">
+            <field name="name">res.bei.partner.form.inherit</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="groups_id" eval="[(5,)]"/>
+            <field name="arch" type="xml">
+                <xpath expr="//group[@name='accounting_entries']" position="before">
+                    <group string="Configuración SAT" name="bei_agrega_model_sat">
+                        <field name="bei_expense_id" string="Cuenta de Gastos"
+                               options="{'no_create': True, 'no_open': True}"/>
+                    </group>
+                </xpath>
+
+            </field>
+        </record>
+    </data>
+
+</odoo>
