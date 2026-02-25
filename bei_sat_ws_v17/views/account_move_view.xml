@@ -7,6 +7,7 @@
 		<field name="arch" type="xml">
 			<xpath expr="//field[@name='payment_reference']" position="after">
 				<field name="hide_message" invisible="1"/>
+				<field name="edi_web_services_to_process" invisible="1"/>
 			</xpath>
 			<xpath expr="//field[@name='journal_id']" position="before">
 				<field name="l10n_mx_edi_cfdi_uuid_cusom"/>
