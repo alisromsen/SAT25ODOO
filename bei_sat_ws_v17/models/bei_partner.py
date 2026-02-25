@@ -4,7 +4,7 @@ import logging
 
 _logger = logging.getLogger(__name__)
 
-ACCOUNT_DOMAIN = "['&', '&', '&', ('deprecated', '=', False), ('internal_type','=','other'), " \
+ACCOUNT_DOMAIN = "['&', '&', '&', ('deprecated', '=', False), ('account_type', 'in', ['expense', 'expense_depreciation', 'expense_direct_cost']), " \
                  "('company_id', '=', current_company_id), ('is_off_balance', '=', False)]"
 
 
