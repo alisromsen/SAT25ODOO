@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="0">
+    <record forcecreate="True" id="ir_cron_automatic_download_sat_xml" model="ir.cron">
+        <field name="name">Descarga Masiva XML SAT: Descarga automatica</field>
+        <field ref="model_bei_verifica_descarga" name="model_id"/>
+        <field name="state">code</field>
+        <field name="code">model._cron_ejecutar_verificacion()</field>
+        <field eval="True" name="active"/>
+        <field name="user_id" ref="base.user_root"/>
+        <field name="interval_number">1</field>
+        <field name="interval_type">hours</field>
+        <field name="numbercall">-1</field>
+        <field eval="False" name="doall"/>
+    </record>
+</odoo>
